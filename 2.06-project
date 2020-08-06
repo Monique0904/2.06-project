@@ -1,0 +1,50 @@
+#program start
+
+#input section
+	#input "Insert the name of first item." into the variable Item1
+	#input "Insert the price of " + Item1 into the variable Price1
+	#input "Insert the name of second item." into the variable Item2
+	#input "Insert the price of " + Item2 into the variable Price2
+	#input "Insert the name of third item." into the variable Item3
+	#input "Insert the price of " + Item3 into the variable Price3
+	
+#processing section
+	#subtotal equals Price1 + Price2 + Price3
+	#sales tax equals Subtotal * 0.065
+	#shipping equals 5.99
+	#total equals Subtotal + SalesTax + Shipping
+	
+#output section
+	#display Item1 + "- $" + str(Price1)
+	#display Item2 + "- $" + str(Price2)
+	#display Item3 + "- $" + str(Price3)
+	#display "Subtotal: $" + str(Subtotal)
+	#display "Sales Tax: $" + str(SalesTax)
+	#display "Shipping: $" + str(Shipping)
+	#display "Total: $" + str(Total)
+
+#eop
+
+from math import*
+
+def main():
+
+	Item1 = input("Insert the name of first item.")
+	Price1 = float(input("Insert the price of " + Item1))
+	print(Item1 + "- $" + str(Price1))
+	Item2 = input("Insert the name of second item.")
+	Price2 = float(input("Insert the price of " + Item2))
+	print(Item2 + "- $" + str(Price2))
+	Item3 = input("Insert the name of third item.")
+	Price3 = float(input("Insert the price of " + Item3))
+	print(Item3 + "- $" + str(Price3))
+	Subtotal = (Price1 + Price2 + Price3)
+	print("Subtotal: $" + str(Subtotal))
+	SalesTax = (Subtotal * 0.065)
+	print("Sales Tax: $" + str(SalesTax))
+	Shipping = float(5.99)
+	print("Shipping: $" + str(Shipping))
+	Total = (Subtotal + SalesTax + Shipping)
+	print("Total: $" + str(Total))
+
+main()
